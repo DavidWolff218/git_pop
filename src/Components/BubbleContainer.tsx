@@ -1,4 +1,4 @@
-function BubbleContainer () {
+const BubbleContainer = () => {
   return ( <></> );
 }
 

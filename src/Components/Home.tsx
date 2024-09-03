@@ -1,10 +1,10 @@
-import Bubble from "./Bubble";
+import BubbleColumn from "./BubbleColumn";
 
 const Home = () => {
   return (
     <>
       <>Welcome to git pop!</>
-      <Bubble />
+     < BubbleColumn />
     </>
   );
 };
