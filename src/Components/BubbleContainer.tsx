@@ -1,5 +1,19 @@
-const BubbleContainer = () => {
-  return ( <></> );
-}
+import BubbleColumn from "./BubbleColumn";
 
-export default BubbleContainer ;
+const BubbleContainer = () => {
+  const renderColumns = () => {
+    const bubbleColumnsArray = [];
+    for (let i = 0; i <= 51; i++) {
+      bubbleColumnsArray.push(<div><BubbleColumn /></div>);
+    }
+    return bubbleColumnsArray;
+  };
+
+  return (
+    <div className="flex">
+    {renderColumns()}
+    </div>
+  );
+};
+
+export default BubbleContainer;

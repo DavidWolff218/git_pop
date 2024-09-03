@@ -2,7 +2,7 @@ import Bubble from "./Bubble";
 
 const BubbleColumn = () => {
 
-  const renderBubbles = (): JSX.Element[] => {
+  const renderBubbles = () => {
     const bubblesArray = []
      for (let i = 0; i <= 7; i++) {
       bubblesArray.push(<Bubble />);
