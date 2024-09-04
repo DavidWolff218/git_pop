@@ -1,10 +1,14 @@
 import Bubble from "./Bubble";
 
-const BubbleColumn = () => {
+type bubbleProps = {
+  bubbleNum: number
+}
+
+const BubbleColumn = ({bubbleNum}: bubbleProps) => {
 
   const renderBubbles = () => {
     const bubblesArray = []
-     for (let i = 0; i <= 7; i++) {
+     for (let i = 1; i <= bubbleNum; i++) {
       bubblesArray.push(<Bubble />);
     }
     return bubblesArray
