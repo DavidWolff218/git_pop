@@ -34,7 +34,7 @@ const BubbleContainer = () => {
 
   return (
     <>
-      <h3 className="text-white pb-1">{updateCount} contributions in 20XX</h3>
+      <h3 className="pb-1">{updateCount} contributions in 20XX</h3>
       <div className="flex w-max border-[1px] border-grey-line rounded-t p-5">
         {renderColumns()}
       </div>

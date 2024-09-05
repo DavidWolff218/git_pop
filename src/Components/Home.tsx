@@ -1,11 +1,15 @@
-
 import BubbleContainer from "./BubbleContainer";
+import RepoBoxes from "./RepoBoxes";
 
 const Home = () => {
   return (
-    <>
-     < BubbleContainer />
-    </>
+    <div className="h-screen flex">
+      <div className="w-[200px] h-[200px] rounded-full border-[2px] border-grey-line" />
+      <div>
+     <RepoBoxes />
+      <BubbleContainer />
+      </div>
+    </div>
   );
 };
 
