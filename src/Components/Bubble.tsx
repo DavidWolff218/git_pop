@@ -30,7 +30,7 @@ const Bubble = ({handleUpdateCount}: bubbleProps) => {
     <>
       <div
         onClick={handleClick}
-        className={`size-2.5 ${levelColor} rounded-sm my-0.5 mx-[1px] transition-transform duration-100 ease-in-out ${expanded ? "scale-110" : ""}`}
+        className={`size-3.5 ${levelColor} rounded-sm my-0.5 mx-[1px] transition-transform duration-100 ease-in-out ${expanded ? "scale-110" : ""}`}
       />
     </>
   );
