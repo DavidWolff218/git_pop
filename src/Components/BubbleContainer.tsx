@@ -5,7 +5,6 @@ const BubbleContainer = () => {
     const date = new Date()
     const dateNum = date.getDay() + 1
     const bubbleColumnsArray = [];
-    console.log(dateNum)
     for (let i = 1; i <= 51; i++) {
       bubbleColumnsArray.push(<div><BubbleColumn bubbleNum={7} /></div>);
     }
@@ -14,7 +13,7 @@ const BubbleContainer = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex w-max border-[1px] border-grey-line rounded-t p-5">
     {renderColumns()}
     </div>
   );

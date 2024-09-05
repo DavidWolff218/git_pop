@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'grey-start' : '#151A22',
+        'grey-bubble' : '#151A22',
+        'grey-line' : '#808790',
         'green-1' : '#0E4429',
         'green-2' : '#166D32',
         'green-3' : '#26A641',

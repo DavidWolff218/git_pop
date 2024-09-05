@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Bubble = () => {
   const [level, setLevel] = useState(0);
-  const [levelColor, setLevelColor] = useState("bg-grey-start");
+  const [levelColor, setLevelColor] = useState("bg-grey-bubble");
   const [expanded, setExpanded] = useState(false)
 
   const handleClick = () => {
