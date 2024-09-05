@@ -1,15 +1,16 @@
 import Bubble from "./Bubble";
 
-type bubbleProps = {
+type bubbleColumnProps = {
   bubbleNum: number
+  handleUpdateCount: () => void;
 }
 
-const BubbleColumn = ({bubbleNum}: bubbleProps) => {
+const BubbleColumn = ({bubbleNum, handleUpdateCount}: bubbleColumnProps) => {
 
   const renderBubbles = () => {
     const bubblesArray = []
      for (let i = 1; i <= bubbleNum; i++) {
-      bubblesArray.push(<Bubble />);
+      bubblesArray.push(<Bubble handleUpdateCount={handleUpdateCount}/>);
     }
     return bubblesArray
   };

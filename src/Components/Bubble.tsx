@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const Bubble = () => {
+type bubbleProps = {
+  handleUpdateCount: () => void;
+}
+
+const Bubble = ({handleUpdateCount}: bubbleProps) => {
+
   const [level, setLevel] = useState(0);
   const [levelColor, setLevelColor] = useState("bg-grey-bubble");
   const [expanded, setExpanded] = useState(false)
@@ -15,6 +20,7 @@ const Bubble = () => {
         bubble_audio.play()
         setExpanded(true)
         setTimeout(() => {setExpanded(false)}, 250)
+        handleUpdateCount()
         return newLevel;
       });
     }
