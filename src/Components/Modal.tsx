@@ -22,7 +22,7 @@ const Modal = ({ handleModalClick }: ModalProps) => {
             <h2 className="text-2xl text-center pb-2">
               Pretend you've done all the coding and bask in the green glow!
             </h2>
-            <button onClick={handleModalClick} className="p-2 text-xl bg-green-3 hover:bg-green-4 my-2 border-2 rounded ">Git Poppin!</button>
+            <button onClick={handleModalClick} className="p-2 text-xl bg-green-3 hover:bg-green-4 my-2 border-2 rounded transition-transform transform hover:scale-110">Git Poppin!</button>
           </div>
         </div>
       </div>
