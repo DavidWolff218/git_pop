@@ -1,7 +1,8 @@
 import BubbleContainer from "./BubbleContainer";
 import RepoBoxes from "./RepoBoxes";
 import Modal from "./Modal";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 
 const Home = () => {
   const [isModalOpen, setIsModelOpen] = useState(true);
