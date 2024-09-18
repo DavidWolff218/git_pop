@@ -3,7 +3,7 @@ import { CountContext } from "../useContext/Context";
 
 const Bubble = () => {
   const [level, setLevel] = useState(0);
-  const [levelColor, setLevelColor] = useState("bg-red-500");
+  const [levelColor, setLevelColor] = useState("bg-grey-bubble");
   const [expanded, setExpanded] = useState(false);
 
   const handleUpdateCount = useContext(CountContext);
