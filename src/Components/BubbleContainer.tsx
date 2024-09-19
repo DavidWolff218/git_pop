@@ -17,7 +17,7 @@ const BubbleContainer = () => {
       bubbleColumnsArray.push(
         <div>
           <CountContext.Provider value={handleUpdateCount}>
-            <BubbleColumn bubbleNum={7} />
+            <BubbleColumn bubbleNum={7} columnNum={i} key={i}/>
           </CountContext.Provider>
         </div>
       );
@@ -25,7 +25,7 @@ const BubbleContainer = () => {
     bubbleColumnsArray.push(
       <div>
         <CountContext.Provider value={handleUpdateCount}>
-          <BubbleColumn bubbleNum={dateNum} />
+          <BubbleColumn bubbleNum={dateNum} columnNum={52} key={52}/>
         </CountContext.Provider>
       </div>
     );
@@ -34,7 +34,6 @@ const BubbleContainer = () => {
 
   return (
     <div>
-      <h3 className="pb-1 pt-10">{updateCount} contributions in 20XX</h3>
       <div className="flex border-[1px] border-grey-line rounded-t p-5">
         {renderColumns()}
       </div>

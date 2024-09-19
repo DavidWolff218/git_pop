@@ -2,13 +2,14 @@ import Bubble from "./Bubble";
 
 type bubbleColumnProps = {
   bubbleNum: number;
+  columnNum: number
 };
 
-const BubbleColumn = ({ bubbleNum }: bubbleColumnProps) => {
+const BubbleColumn = ({ bubbleNum, columnNum }: bubbleColumnProps) => {
   const renderBubbles = () => {
     const bubblesArray = [];
     for (let i = 1; i <= bubbleNum; i++) {
-      bubblesArray.push(<Bubble />);
+      bubblesArray.push(<Bubble key={`${columnNum}-${i}`}/>);
     }
     return bubblesArray;
   };
