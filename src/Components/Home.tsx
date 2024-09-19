@@ -25,7 +25,7 @@ const Home = () => {
             <RepoBoxes />
           </div>
         </div>
-        <BubbleCounter />
+        {/* <BubbleCounter /> */}
         <BubbleContainer />
       </div>
     </div>
