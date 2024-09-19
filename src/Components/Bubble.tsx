@@ -14,19 +14,17 @@ const Bubble = ({handleUpdateCount}: BubbleProps) => {
 
   const handleClick = () => {
     if (level < 4) {
-      setLevel((prev) => {
-        const newLevel = prev + 1;
-        const bubble_audio = new Audio(`/audio/git_boop_${newLevel}.mp3`);
-        bubble_audio.volume = 0.2;
-        bubble_audio.play();
-        setExpanded(true);
-        setTimeout(() => {
-          setExpanded(false);
-        }, 250);
-        handleUpdateCount();
-        return newLevel;
-      });
+      const newLevel = level + 1;
+      setLevel(newLevel);
+      const bubble_audio = new Audio(`/audio/git_boop_${newLevel}.mp3`);
+      bubble_audio.volume = 0.2;
+      bubble_audio.play();
+      setExpanded(true);
+      setTimeout(() => {
+        setExpanded(false);
+      }, 250);
     }
+    handleUpdateCount();
   };
 
   return (
