@@ -1,13 +1,20 @@
 import BubbleColumn from "./BubbleColumn";
+import React from "react";
 import { useState } from "react";
 import { CountContext } from "../useContext/Context";
 
-const BubbleContainer = () => {
+type BubbleContainerProps = {
+  handleUpdateCount: () => void
+}
+
+const BubbleContainer = React.memo(({handleUpdateCount}: BubbleContainerProps) => {
   // const [updateCount, setUpdateCount] = useState(0);
 
   // const handleUpdateCount = () => {
   //   setUpdateCount((prev) => prev + 1);
   // };
+
+  console.log("bubble container has rerendered")
 
   const renderColumns = () => {
     const date = new Date();
@@ -17,7 +24,7 @@ const BubbleContainer = () => {
       bubbleColumnsArray.push(
         <div>
           {/* <CountContext.Provider value={handleUpdateCount}> */}
-            <BubbleColumn bubbleNum={7} columnNum={i} key={i}/>
+            <BubbleColumn bubbleNum={7} columnNum={i} key={i} handleUpdateCount={handleUpdateCount}/>
           {/* </CountContext.Provider> */}
         </div>
       );
@@ -25,7 +32,7 @@ const BubbleContainer = () => {
     bubbleColumnsArray.push(
       <div>
         {/* <CountContext.Provider value={handleUpdateCount}> */}
-          <BubbleColumn bubbleNum={dateNum} columnNum={52} key={52}/>
+          <BubbleColumn bubbleNum={dateNum} columnNum={52} key={52} handleUpdateCount={handleUpdateCount}/>
         {/* </CountContext.Provider> */}
       </div>
     );
@@ -39,6 +46,6 @@ const BubbleContainer = () => {
       </div>
     </div>
   );
-};
+});
 
 export default BubbleContainer;

@@ -3,10 +3,17 @@ import BubbleCounter from "./BubbleCounter";
 import RepoBoxes from "./RepoBoxes";
 import Modal from "./Modal";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const Home = () => {
   const [isModalOpen, setIsModelOpen] = useState(true);
+  const [updateCount, setUpdateCount] = useState(0);
+
+  const handleUpdateCount = useCallback(() => {
+    setUpdateCount((prev) => prev + 1);
+  }, []);
+
+  console.log("home has rerendered")
 
   const handleModalClick = () => {
     const bubble_audio = new Audio(`/audio/git_boop_4.mp3`);
@@ -25,8 +32,8 @@ const Home = () => {
             <RepoBoxes />
           </div>
         </div>
-        {/* <BubbleCounter /> */}
-        <BubbleContainer />
+        <BubbleCounter updateCount={updateCount}/>
+        <BubbleContainer handleUpdateCount={handleUpdateCount}/>
       </div>
     </div>
   );
