@@ -7,7 +7,7 @@ type BubbleContainerProps = {
   handleUpdateCount: () => void
 }
 
-const BubbleContainer = React.memo(({handleUpdateCount}: BubbleContainerProps) => {
+const BubbleContainer = ({handleUpdateCount}: BubbleContainerProps) => {
   // const [updateCount, setUpdateCount] = useState(0);
 
   // const handleUpdateCount = () => {
@@ -46,6 +46,6 @@ const BubbleContainer = React.memo(({handleUpdateCount}: BubbleContainerProps) =
       </div>
     </div>
   );
-});
+};
 
-export default BubbleContainer;
+export default React.memo(BubbleContainer);

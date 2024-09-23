@@ -10,7 +10,7 @@ const Bubble = ({ handleUpdateCount }: BubbleProps) => {
   const [expanded, setExpanded] = useState(false);
 
   // const handleUpdateCount = useContext(CountContext);
-
+console.log("bubbles have rerendered")
   const handleClick = () => {
     if (level < 4) {
       const newLevel = level + 1;
