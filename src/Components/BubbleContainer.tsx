@@ -20,11 +20,11 @@ const BubbleContainer = ({handleUpdateCount}: BubbleContainerProps) => {
     const date = new Date();
     const dateNum = date.getDay() + 1;
     const bubbleColumnsArray = [];
-    for (let i = 1; i <= 51; i++) {
+    for (let i = 1; i <= 2; i++) {
       bubbleColumnsArray.push(
         <div>
           {/* <CountContext.Provider value={handleUpdateCount}> */}
-            <BubbleColumn bubbleNum={7} columnNum={2} key={i} handleUpdateCount={handleUpdateCount}/>
+            <BubbleColumn bubbleNum={7} columnNum={i} key={i} handleUpdateCount={handleUpdateCount}/>
           {/* </CountContext.Provider> */}
         </div>
       );
