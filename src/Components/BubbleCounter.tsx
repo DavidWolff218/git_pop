@@ -14,3 +14,4 @@ const BubbleCounter = ({updateCount}: BubbleCounterProps) => {
 };
 
 export default BubbleCounter;
+

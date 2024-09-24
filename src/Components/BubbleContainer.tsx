@@ -24,7 +24,7 @@ const BubbleContainer = ({handleUpdateCount}: BubbleContainerProps) => {
       bubbleColumnsArray.push(
         <div>
           {/* <CountContext.Provider value={handleUpdateCount}> */}
-            <BubbleColumn bubbleNum={7} columnNum={i} key={i} handleUpdateCount={handleUpdateCount}/>
+            <BubbleColumn bubbleNum={7} columnNum={2} key={i} handleUpdateCount={handleUpdateCount}/>
           {/* </CountContext.Provider> */}
         </div>
       );
